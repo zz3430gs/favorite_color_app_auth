@@ -17,6 +17,7 @@ router.get('/signup', function (req, res, next) {
     res.render('signup');
 });
 
+/*POST login to account*/
 router.post('/login', passport.authenticate('local-login', {
     successRedirect: '/secret',
     failureRedirect: '/login',
