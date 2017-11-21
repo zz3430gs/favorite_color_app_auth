@@ -54,6 +54,7 @@ function isLoggedIn(req, res, next) {
     }
 }
 
+/*POST new update made to users information*/
 router.post('/saveSecrets', isLoggedIn, function(req, res, next){
 
     // Check if the user has provided any new data
