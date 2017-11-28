@@ -24,12 +24,14 @@ router.post('/login', passport.authenticate('local-login', {
     failureFlash: true
 }));
 
+/*POST to signup for account*/
 router.post('/signup', passport.authenticate('local-signup', {
   successRedirect: '/secret',
   failureRedirect: '/signup',
   failureFlash: true
 }));
 
+/*GET the secret page for personal account info*/
 router.get('/secret', isLoggedIn, function (req, res, next) {
 
   res.render('secret', {

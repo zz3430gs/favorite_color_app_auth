@@ -16,6 +16,8 @@ var users = require('./routes/users');
 
 var app = express();
 
+//Get the mongourl and connect to the mongodb if an error connecting to mongodb an error message will
+//show in the console
 var mongo_url = process.env.MONGO_URL;
 mongoose.Promise = global.Promise;
 mongoose.connect(mongo_url, {useMongoClient: true})

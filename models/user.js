@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
+//The schema for creating a account
 var userSchema = mongoose.Schema({
    local: {
        username: String,
